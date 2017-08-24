@@ -1,6 +1,17 @@
 @import 'partials/sass-material-colors-classes';
 @import 'partials/sass-material-colors';
 
+.navbar.main{
+  border-radius: 0px;
+  a{
+    color: white;
+
+    &:hover{
+      color: #7986cb;
+    }
+  }
+}
+
 .color-white{
   color: white;
 }
