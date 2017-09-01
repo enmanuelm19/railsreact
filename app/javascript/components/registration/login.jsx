@@ -69,7 +69,7 @@ export class Login extends Base {
           </div>
           <div>
             <RaisedButton type="submit" label="Iniciar sesión" disabled={!this.state.canSubmit}
-              style={styles.buttonTop} backgroundColor={styles.red} labelColor='#ffffff'
+              style={styles.buttonTop} backgroundColor={styles.green} labelColor='#ffffff'
                />
              <a href="#" style={styles.leftSpace} onClick={this.props.toggle}> Crear cuenta </a>
           </div>

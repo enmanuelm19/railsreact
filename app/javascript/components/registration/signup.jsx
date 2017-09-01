@@ -82,7 +82,7 @@ export class SignUp extends Base {
           </div>
           <div>
             <RaisedButton type="submit" label="Registro" disabled={!this.state.canSubmit}
-              style={styles.buttonTop} backgroundColor={styles.red}
+              style={styles.buttonTop} backgroundColor={styles.green}
                />
              <a href="#" style={styles.leftSpace} onClick={this.props.toggle}> Ya tengo cuenta </a>
           </div>

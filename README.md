@@ -26,6 +26,9 @@ Things you may want to cover:
 
 * Deployment instructions
 
+* Tools instructions
+  * All js dependencies was installed with yarn `./bin/yarn add dependecy`
+
 * Tools
   * [Webpacker](https://github.com/rails/webpacker)
   * [Formsy-react](https://github.com/christianalfoni/formsy-react)
@@ -35,3 +38,7 @@ Things you may want to cover:
   * [react-tap-event-plugin](https://github.com/zilverline/react-tap-event-plugin)
   * [Reqwest](https://github.com/ded/reqwest)
   * [Devise](https://github.com/plataformatec/devise)
+  * [Annotate](https://github.com/ctran/annotate_models/)
+  * [Markdown-js](https://github.com/evilstreak/markdown-js)
+  * [React-render-html](https://github.com/noraesae/react-render-html)
+  * [Paperclip](https://github.com/thoughtbot/paperclip)

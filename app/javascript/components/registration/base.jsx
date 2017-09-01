@@ -3,7 +3,7 @@ import Formsy from 'formsy-react';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import FormsyText from 'formsy-material-ui/lib/FormsyText';
 import RaisedButton from 'material-ui/RaisedButton';
-import {blueA400,redA400} from 'material-ui/styles/colors'
+import {blueA400,redA400,green600} from 'material-ui/styles/colors';
 
 
 export const styles = {
@@ -19,7 +19,8 @@ export const styles = {
   leftSpace:{
     marginLeft: '1em'
   },
-  red: redA400
+  red: redA400,
+  green: green600
 }
 
 export class Base extends React.Component {
