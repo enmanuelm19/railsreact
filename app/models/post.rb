@@ -19,6 +19,7 @@ class Post < ApplicationRecord
   has_many :images
   validates :markdown_content, presence: true, length: { minimum: 2}
   after_save :update_images
+  after_create :push_to_web_sockets
   attr_accessor :images_ids
 
   def self.latest
@@ -28,5 +29,12 @@ class Post < ApplicationRecord
   private
     def update_images
       Image.where(post_id: nil).where(id: images_ids).update_all(post_id: self.id)
+    end
+
+    def push_to_web_sockets
+      ActionCable.server.broadcast("posts",
+        html_content: html_content,
+        user_id: user_id
+      )
     end
 end
