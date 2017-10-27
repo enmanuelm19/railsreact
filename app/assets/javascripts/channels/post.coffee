@@ -1,3 +1,6 @@
+###
+Now is connected to chanel from post componen in react
+
 App.post = App.cable.subscriptions.create "PostChannel",
   connected: ->
     # Called when the subscription is ready for use on the server
@@ -13,3 +16,4 @@ App.post = App.cable.subscriptions.create "PostChannel",
     # Called when there's incoming data on the websocket for this channel
     console.log "recibimos nueva data"
     console.log data
+###

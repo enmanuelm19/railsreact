@@ -13,6 +13,8 @@ Things you may want to cover:
   `6.11.0`
 * NPM version
   `3.10.10`
+* Redis version
+  `3.2.10`
 
 * Configuration
 
@@ -42,3 +44,10 @@ Things you may want to cover:
   * [Markdown-js](https://github.com/evilstreak/markdown-js)
   * [React-render-html](https://github.com/noraesae/react-render-html)
   * [Paperclip](https://github.com/thoughtbot/paperclip)
+
+* How tu run in development enviroment
+  ```
+    - rails server
+    - ./bin/webpack-dev-server
+    - redis-server
+  ```

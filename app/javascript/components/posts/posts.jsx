@@ -4,10 +4,24 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
 export class Posts extends React.Component {
 
+  constructor(props){
+    super(props);
+
+    this.state = {
+      []
+    }
+  }
+
+  componentWillReceiveProps(nextProps){
+    this.setState({
+      posts: nextProps.posts
+    })
+  }
+
   publications(){
-    if(this.props.posts){
+    if(this.state.posts){
       //Functional way
-      return this.props.posts.map(post => {
+      return this.state.posts.map(post => {
         return <Post key={post.id} post={post}></Post>;
       })
       /*
@@ -20,6 +34,28 @@ export class Posts extends React.Component {
       return posts;*/
     }
     return "";
+  }
+
+  componentDidMount(){
+    this.subscribe();
+  }
+
+  subscribe(){
+    App.post = App.cable.subscriptions.create("PostChannel",{
+      connected: ()=>{
+        console.log("Subscrito a la websocket");
+      },
+      disconnected: ()=>{
+
+      },
+      received: (data)=>{
+         let post = JSON.parse(data.data);
+         this.setState({
+           posts: [post].concat(this.state.posts)
+         })
+      }
+    })
+
   }
 
   render(){
