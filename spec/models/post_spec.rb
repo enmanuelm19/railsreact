@@ -18,6 +18,7 @@ RSpec.describe Post, type: :model do
         image = FactoryBot.create(:image, post_id: post.id)
         new_image = FactoryBot.create(:image, post_id: nil)
         post.images_ids = [new_image.id]
+        post.save
         new_image.reload
         expect(new_image.post_id).to eq(post.id)
       end
