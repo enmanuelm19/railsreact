@@ -33,7 +33,7 @@ class Post < ApplicationRecord
     end
 
     def push_to_web_sockets
-      if created_at_changed?
+      if will_save_change_to_attribute? :create_at
         ActionCable.server.broadcast("posts",
           data: json_view
         )
